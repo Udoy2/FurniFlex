@@ -46,24 +46,24 @@ const Store = () => {
 
           {/* pagination */}
               <div className="m-auto">
-              <div class="flex justify-center mt-8">
-                <nav class="flex space-x-2">
-                  <a class="px-3 py-1 bg-white border border-gray-300 rounded-md" href="#">
+              <div className="flex justify-center mt-8">
+                <nav className="flex space-x-2">
+                  <a className="px-3 py-1 bg-white border border-gray-300 rounded-md" href="#">
                     1
                   </a>
-                  <a class="px-3 py-1 bg-white border border-gray-300 rounded-md" href="#">
+                  <a className="px-3 py-1 bg-white border border-gray-300 rounded-md" href="#">
                     2
                   </a>
-                  <span class="px-3 py-1">
+                  <span className="px-3 py-1">
                     —
                   </span>
-                  <a class="px-3 py-1 bg-white border border-gray-300 rounded-md" href="#">
+                  <a className="px-3 py-1 bg-white border border-gray-300 rounded-md" href="#">
                     9
                   </a>
-                  <a class="px-3 py-1 bg-white border border-gray-300 rounded-md" href="#">
+                  <a className="px-3 py-1 bg-white border border-gray-300 rounded-md" href="#">
                     10
                   </a>
-                  <a class="px-3 py-1 bg-white border border-gray-300 rounded-md" href="#">
+                  <a className="px-3 py-1 bg-white border border-gray-300 rounded-md" href="#">
                     &gt;
                   </a>
                 </nav>

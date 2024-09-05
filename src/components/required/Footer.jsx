@@ -6,17 +6,17 @@ import { faFacebookF, faTwitter, faInstagram } from "@fortawesome/free-brands-sv
 const Footer = () => {
     return (
         <div className="bg-black text-white ">
-            <footer class="py-10">
-                <div class="container mx-auto px-4">
-                    <div class="flex justify-between items-start">
-                        <div class="flex items-center space-x-2">
+            <footer className="py-10">
+                <div className="container mx-auto px-4">
+                    <div className="flex justify-between items-start">
+                        <div className="flex items-center space-x-2">
                             <img src={icon} alt="FurniFlex Logo" width="40" />
-                            <span class="text-xl font-bold">Furni<span class="text-blue-500">Flex</span></span>
+                            <span className="text-xl font-bold">Furni<span className="text-blue-500">Flex</span></span>
                         </div>
-                        <div class="flex space-x-16">
+                        <div className="flex space-x-16">
                             <div>
-                                <h3 class="font-bold mb-4">About US</h3>
-                                <ul class="space-y-2">
+                                <h3 className="font-bold mb-4">About US</h3>
+                                <ul className="space-y-2">
                                     <li>Master Plan</li>
                                     <li>Jobs</li>
                                     <li>Invest</li>
@@ -26,8 +26,8 @@ const Footer = () => {
                                 </ul>
                             </div>
                             <div>
-                                <h3 class="font-bold mb-4">Explore EEVE</h3>
-                                <ul class="space-y-2">
+                                <h3 className="font-bold mb-4">Explore EEVE</h3>
+                                <ul className="space-y-2">
                                     <li>Unlock my Robot Power</li>
                                     <li>Starlight</li>
                                     <li>Robot Platform</li>
@@ -35,8 +35,8 @@ const Footer = () => {
                                 </ul>
                             </div>
                             <div>
-                                <h3 class="font-bold mb-4">Community & Support</h3>
-                                <ul class="space-y-2">
+                                <h3 className="font-bold mb-4">Community & Support</h3>
+                                <ul className="space-y-2">
                                     <li>Willow X Community</li>
                                     <li>Developer & Maker Access</li>
                                     <li>Special Cases</li>
@@ -44,8 +44,8 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="mt-10 border-t border-gray-700 pt-6 flex justify-between items-center">
-                        <div class="flex space-x-4">
+                    <div className="mt-10 border-t border-gray-700 pt-6 flex justify-between items-center">
+                        <div className="flex space-x-4">
                             <a href="#">
                                 <FontAwesomeIcon icon={faFacebookF} className="text-gray-400 hover:text-white" />
                             </a>
@@ -56,18 +56,18 @@ const Footer = () => {
                                 <FontAwesomeIcon icon={faInstagram} className="text-gray-400 hover:text-white" />
                             </a>
                         </div>
-                        <div class="flex space-x-6 text-gray-400">
+                        <div className="flex space-x-6 text-gray-400">
                             <a href="#">March22 Recap</a>
                             <a href="#">Privacy Policy</a>
                             <a href="#">General Terms</a>
                             <a href="#">Contact</a>
                         </div>
-                        <div class="flex items-center space-x-2 text-gray-400">
-                            <span class="fi fi-us"></span>
+                        <div className="flex items-center space-x-2 text-gray-400">
+                            <span className="fi fi-us"></span>
                             <span>United States (English)</span>
                         </div>
                     </div>
-                    <div class="mt-4 text-center text-gray-500">
+                    <div className="mt-4 text-center text-gray-500">
                         EEVE © 2024. All rights reserved.
                     </div>
                 </div>
