@@ -1,9 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 
-// Create AuthContext
 export const AuthContext = createContext();
 
-// User data will be stored in users.json file
 const usersFile = [
   {
     email: "existinguser@email.com",
@@ -17,7 +15,6 @@ export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
 
-  // Load user from localStorage on initial load
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("authUser"));
     if (storedUser) {
@@ -43,7 +40,6 @@ export const AuthProvider = ({ children }) => {
     if (userExists) {
       alert("User already exists. Please log in.");
     } else {
-      // Simulate saving user data in local JSON (usersFile in real app should be an API call)
       const newUser = { email, password, firstName, lastName };
       usersFile.push(newUser);
 
