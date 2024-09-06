@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import Navbar from "./required/Navbar";
 import Footer from "./required/Footer";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 const Cart = () => {
   const { cartItems, removeFromCart } = useContext(CartContext);
 
@@ -63,10 +64,11 @@ const Cart = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <span className="text-gray-700">€{item.price * item.quantity}</span>
-                    <i
-                      className="fas fa-times text-gray-500 cursor-pointer"
+                    <FontAwesomeIcon
+                      icon={faTimes}
+                      className="text-gray-500 cursor-pointer"
                       onClick={() => removeFromCart(item.id)}
-                    ></i>
+                    />
                   </div>
                 </div>
               ))}
