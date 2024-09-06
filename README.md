@@ -22,14 +22,14 @@ FurniFlex is a fully functional e-commerce web application built using **React**
 ## Screenshots
 
 - **Store Page**  
-  ![Store Page](https://github.com/Udoy2/FurniFlex/screenshots/store.png)
+  ![Store Page](https://github.com/Udoy2/FurniFlex/blob/main/screenshots/store.png)
 
 - **Cart Page**  
-  ![Cart Page](https://github.com/Udoy2/FurniFlex/screenshots/cart.png)
+  ![Cart Page](https://github.com/Udoy2/FurniFlex/blob/main/screenshots/cart.png)
 - **Login Page**  
-  ![Login Page](https://github.com/Udoy2/FurniFlex/screenshots/login.png)
+  ![Login Page](https://github.com/Udoy2/FurniFlex/blob/main/screenshots/login.png)
 - **Signup Page**  
-  ![Signup Page](https://github.com/Udoy2/FurniFlex/screenshots/signup.png)
+  ![Signup Page](https://github.com/Udoy2/FurniFlex/blob/main/screenshots/signup.png)
 
 ## Folder Structure
 
