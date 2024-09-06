@@ -24,7 +24,7 @@ const Pagination = ({ products, maxLimit, pageNo, setPageNo }) => {
 
             {/* Pagination controls */}
             <div className="m-auto">
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center mt-8 ml-10">
                     <nav className="flex space-x-2">
                         {/* Previous Button */}
                         <button
