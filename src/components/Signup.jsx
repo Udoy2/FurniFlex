@@ -23,7 +23,7 @@ const Signup = () => {
   return (
     <div className="flex h-screen">
       <div className="w-1/2 flex items-center justify-center bg-white">
-        <div className="w-full max-w-md p-8 space-y-6 bg-[#FAFAFA]  ">
+        <div className="w-full max-w-md p-8 space-y-6 bg-[#FAFAFA] border border-slate-800/20 ">
           <h2 className="text-center text-2xl font-bold">Welcome To</h2>
           <h1 className="text-center text-3xl font-bold text-black">
             Furni<span className="text-blue-500">Flex</span>
