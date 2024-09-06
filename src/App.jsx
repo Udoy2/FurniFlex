@@ -8,22 +8,22 @@ import Store from "./components/Store";
 import { CartProvider } from "./context/CartContext";
 const App = () => {
   return (
-    <AuthProvider>
-      <ProductProvider>
+    <ProductProvider>
       <CartProvider>
         <Router>
-          <Routes>
+          <AuthProvider>
+            <Routes>
 
 
-            <Route path="/" element={<Store />} />
+              <Route path="/" element={<Store />} />
 
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-          </Routes>
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+            </Routes>
+          </AuthProvider>
         </Router>
-        </CartProvider>
-      </ProductProvider>
-    </AuthProvider>
+      </CartProvider>
+    </ProductProvider>
   );
 };
 

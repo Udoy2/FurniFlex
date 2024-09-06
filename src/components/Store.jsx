@@ -5,7 +5,9 @@ import Footer from "./required/Footer";
 import { CartContext } from "../context/CartContext";
 import Navbar from "./required/Navbar";
 import Pagination from "./required/Pagination";
+import useAuthCheck from "./middleware/useAuthCheck";
 const Store = () => {
+  useAuthCheck()
   const { products } = useContext(ProductContext);
   const { addToCart } = useContext(CartContext);
   const [pageNo, setPageNo] = useState(1); 

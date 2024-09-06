@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom'; // useNavigate replaces useHistory
 
 export const AuthContext = createContext();
 
@@ -14,7 +15,7 @@ const usersFile = [
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("authUser"));
     if (storedUser) {
@@ -45,7 +46,7 @@ export const AuthProvider = ({ children }) => {
 
       // Persist the new user
       persistUser(newUser);
-      alert("Signup successful!");
+      navigate('/login')
     }
   };
 
@@ -57,7 +58,7 @@ export const AuthProvider = ({ children }) => {
 
     if (foundUser) {
       persistUser(foundUser);
-      alert("Login successful!");
+      navigate('/')
     } else {
       alert("Invalid email or password.");
     }
@@ -72,7 +73,13 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ isAuthenticated, currentUser, signup, login, logout }}
+      value={{ isAuthenticated,
+        setIsAuthenticated,
+        currentUser,
+        setCurrentUser,
+        signup,
+        login,
+        logout, }}
     >
       {children}
     </AuthContext.Provider>

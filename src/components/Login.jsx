@@ -7,15 +7,10 @@ const Login = () => {
     const { login } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [agreeToTerms, setAgreeToTerms] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (agreeToTerms) {
-            login(email, password); // Calls login function from AuthContext
-        } else {
-            alert("Please agree to the terms.");
-        }
+        login(email,password)
     };
 
     return (
@@ -50,21 +45,7 @@ const Login = () => {
                             <i className="fas fa-eye absolute right-3 top-3 text-gray-500 cursor-pointer"></i>
                         </div>
                         <div className="flex justify-between items-center mt-4">
-                            <div>
-                                <input
-                                    type="checkbox"
-                                    id="terms"
-                                    className="mr-2"
-                                    checked={agreeToTerms}
-                                    onChange={() => setAgreeToTerms(!agreeToTerms)}
-                                />
-                                <label className="text-gray-700" htmlFor="terms">
-                                    I agree to the{" "}
-                                    <a href="#" className="text-blue-500">
-                                        Terms & Policy
-                                    </a>
-                                </label>
-                            </div>
+                            
                             <a href="#" className="text-blue-500">
                                 Forgot Password?
                             </a>
