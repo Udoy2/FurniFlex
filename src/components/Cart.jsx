@@ -5,15 +5,9 @@ import Footer from "./required/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 const Cart = () => {
-  const { cartItems, removeFromCart } = useContext(CartContext);
+  const { cartItems, removeFromCart,addToCart } = useContext(CartContext);
 
-  const handleQuantityChange = (product, action) => {
-    if (action === "increase") {
-      product.quantity += 1;
-    } else if (action === "decrease" && product.quantity > 1) {
-      product.quantity -= 1;
-    }
-  };
+  
 
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -21,13 +15,13 @@ const Cart = () => {
   );
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-white">
       <Navbar />
 
       <section className="container mx-auto px-4 py-8">
         <div className="flex justify-between">
           {/* Order Overview */}
-          <div className="w-2/3 bg-white p-6 rounded-lg shadow-md">
+          <div className="w-2/3 bg-[#FAFAFA] mr-5 border border-slate-800/10 p-6  ">
             <h2 className="text-2xl font-semibold mb-6">An overview of your order</h2>
             <div className="space-y-4">
               {cartItems.map((item) => (
@@ -36,7 +30,7 @@ const Cart = () => {
                     <div className="flex items-center border border-gray-300 rounded">
                       <button
                         className="px-2 py-1"
-                        onClick={() => handleQuantityChange(item, "decrease")}
+                        onClick={() => removeFromCart(item.id, "decrease")}
                       >
                         -
                       </button>
@@ -48,7 +42,7 @@ const Cart = () => {
                       />
                       <button
                         className="px-2 py-1"
-                        onClick={() => handleQuantityChange(item, "increase")}
+                        onClick={() => addToCart(item)}
                       >
                         +
                       </button>
@@ -76,7 +70,7 @@ const Cart = () => {
           </div>
 
           {/* Order Details */}
-          <div className="w-1/3 bg-white p-6 rounded-lg shadow-md">
+          <div className="w-1/3 bg-[#FAFAFA] border border-slate-800/10 p-6  ">
             <h2 className="text-2xl font-semibold mb-6">Order details</h2>
             <div className="space-y-4">
               <div className="flex justify-between">
